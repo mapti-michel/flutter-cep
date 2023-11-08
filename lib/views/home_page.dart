@@ -14,6 +14,16 @@ class _HomePageState extends State<HomePage> {
   bool _enableField = true;
   String? _result;
 
+  String? _localidade;
+  String? _cep;
+  String? _logradouro;
+  String? _complemento;
+  String? _bairro;
+  String? _uf;
+  String? _unidade;
+  String? _ibge;
+  String? _gia;
+
   @override
   void dispose() {
     super.dispose();
@@ -88,6 +98,14 @@ class _HomePageState extends State<HomePage> {
 
     setState(() {
       _result = resultCep.toJson();
+      _localidade = resultCep.localidade;
+      _cep = resultCep.cep;
+      _logradouro = resultCep.logradouro;
+      _bairro = resultCep.bairro;
+      _uf = resultCep.uf;
+      _unidade = resultCep.unidade;
+      _ibge = resultCep.ibge;
+      _gia = resultCep.gia;
     });
 
     _searching(false);
@@ -229,8 +247,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ]),
-
-
     );
   }
 }
