@@ -113,6 +113,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildResultForm() {
     String msgNot = 'não foi preenchido';
+
     String localidade = '';
     String cep = '';
     String logradouro = '';
@@ -136,8 +137,23 @@ class _HomePageState extends State<HomePage> {
 
     return Container(
       padding: EdgeInsets.only(top: 20.0),
+
 //      child: Text(_result ?? ''),
       child: Column(children: [
+/*
+        Row(
+          children: [
+            Text(
+              'API: ',
+              style: TextStyle(color: Colors.red, fontWeight: FontWeight.w800, fontSize: 16),
+            ),
+            Text(
+              _result ?? '',
+              style: TextStyle(color: Colors.black),
+            ),
+          ],
+        ),
+*/
         Row(
           children: [
             Text(
